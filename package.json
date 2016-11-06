@@ -9,7 +9,7 @@
     "serve": "cross-env NODE_ENV=production node dist/index.js",
     "clean": "rimraf dist",
     "doc": "esdoc -c esdoc.json",
-    "lint": "eslint src/**",
+    "lint": "eslint \"+(test|src)/**\"",
     "test": "mocha --compilers js:babel-register \"+(test|src)/**/*.test.js\"",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --compilers js:babel-register \"+(test|src)/**/*.test.js\""
   },
