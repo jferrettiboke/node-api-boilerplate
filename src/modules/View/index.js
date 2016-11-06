@@ -7,7 +7,7 @@ class View {
   }
 
   render(str, context) {
-    const type = this.type(str);
+    const type = this.constructor.type(str);
 
     if (type === 'raw') {
       return nunjucks.renderString(str, context);
@@ -31,8 +31,8 @@ class View {
   }
 }
 
-export const view = (str, context = {}) => {
-  const V = new View();
+export const view = (str, context = {}, options = {}) => {
+  const V = new View(options);
   return V.render(str, context);
 };
 
