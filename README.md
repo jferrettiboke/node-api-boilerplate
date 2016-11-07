@@ -18,6 +18,34 @@ Execute `npm install` to install all the dependencies.
 
 The default directory structure is intended to provide a great starting point for both large and small applications. Of course, you are free to organize the directory structure however you like.
 
+#### The `src` directory
+
+```
+src
+│   index.js ---> The start app point
+|
+├───app --------> This is where your app lives
+└───modules ----> Your own modules with independent app logic
+```
+
+#### The `app` directory
+
+```
+app
+│   server.js -----> The server
+|
+├───api -----------> All the API logic stay here
+├───config --------> The configuration files
+├───graphql -------> All about GraphQL
+├───public --------> The unique public folder accessed by anyone
+├───resources -----> Language files and view files used by your app
+│   ├───locales
+│   └───views
+└───storage -------> Uploaded files and logs files (this is not public)
+    ├───app
+    └───logs
+```
+
 ### Development environment
 
 #### Start
