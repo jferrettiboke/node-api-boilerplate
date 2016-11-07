@@ -1,4 +1,5 @@
 /* eslint-disable */
+import path from 'path';
 import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
@@ -20,7 +21,7 @@ db.once('open', () => console.log('We are connected!'));
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
-app.use('/static', express.static('src/app/public'));
+app.use('/static', express.static(path.join(__dirname, 'public')));
 
 app.use('/graphql', graphqlHTTP(req => ({
   schema,
