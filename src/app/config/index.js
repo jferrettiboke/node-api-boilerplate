@@ -1,4 +1,7 @@
 export default {
+  server: {
+    port: 3000
+  },
   database: {
     host: 'localhost',
     port: 27017,

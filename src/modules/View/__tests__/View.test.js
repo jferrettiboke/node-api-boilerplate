@@ -14,7 +14,7 @@ describe('View module', () => {
   it('renders a file', (done) => {
     const options = { path: 'src/modules/View/__tests__' };
     const str = view('index.html', { username: 'John' }, options);
-    expect(str).to.equal('Hello John\n');
+    expect(str).to.equal('Hello John\r\n');
     return done();
   });
 });

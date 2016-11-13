@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt-nodejs';
 import config from '../../config';
 
 export const getTokenFromRequest = req => (
-  req.body.token || req.params.token || req.headers.Authorization
+  req.body.token || req.params.token || req.headers.authorization
 );
 
 export const createToken = payload => (
